@@ -1,4 +1,4 @@
-document.getElementbyID("reversedStringForm").addEventListener("submit", function(event){
+document.getElementByID("reversedStringForm").addEventListener("submit", function(event){
     event.preventDefault();
 
     var inputText = document.getElementByID("input").value;
