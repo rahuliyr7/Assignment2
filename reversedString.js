@@ -2,7 +2,7 @@ document.getElementByID("reversedStringForm").addEventListener("submit", functio
     event.preventDefault();
 
     var inputText = document.getElementByID("input").value;
-    var result = ""
+    var reversed = ""
     
     for( var i = inputText.length-1; i>=0; i --) {
         reversed += inputText[i];
