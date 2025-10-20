@@ -51,34 +51,28 @@ document.getElementById("tipCalculatorForm").addEventListener("submit", function
     event.preventDefault();
 
     var subTotal = parseFloat(document.getElementById("billSubtotal").value);
-    var percetageTip = 20 //def
-    var tipBox = document.getElementById("tipPercentage");
     
-
     if(isNaN(subTotal) || subTotal <= 0){
         alert("enter a valid bil total");
         return;
-    
     }
-
-   
-    if (tipBox && tipBox.value ! ==""){
+    var percetageTip = 20 //def
+    var tipBox = document.getElementById("tipPercentage");
+    if (tipBox && tipBox.value !== ""){
         var typed = parseFloat(tipBox.value);
         if(!NaN(typed)&& typed >= 0){
             percetageTip = typed;
         }
     }
 
-    tip = subTotal *(percetageTip/100);
-    overallTotal = subTotal + tip;
+   var tip = subTotal *(percetageTip/100);
+   var  overallTotal = subTotal + tip;
 
     document.getElementById("finalSubtotal").textContent =" $"+ subTotal;
     document.getElementById("finalTip").textContent =" $"+ tip;
     document.getElementById("finalTotal").textContent =" $"+ overallTotal;
     document.getElementById("completed").textContent = "your total with "+ percetageTip + " tip is " + overallTotal;
 
-}
-
-
+});
 
 
