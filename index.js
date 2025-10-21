@@ -84,7 +84,7 @@ document.getElementById("tipCalculatorForm").addEventListener("submit", function
     var total = subTotal + tip;
 
     //round
-    subtTotal = parseFloat(subTotal.toFixed(2));
+    subTotal = parseFloat(subTotal.toFixed(2));
     tip = parseFloat(tip.toFixed(2));
     total = parseFloat(tip.toFixed(2));
 
