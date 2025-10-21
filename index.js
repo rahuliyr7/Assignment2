@@ -62,16 +62,16 @@ document.getElementById("tipCalculatorForm").addEventListener("submit", function
     event.preventDefault();
   //intake subtotal
     var subTotal = parseFloat(document.getElementById("billSubtotal").value);
-    var tipBox = document.getElementById("tipPercentage");
-    var percentageTip = 20; // def
-  
     // check  validity
     if (isNaN(subTotal) || subTotal <= 0) {
       alert("enter a valid bil total");
       return;
     }
   
-    // check if manual tip entered
+    // check if manual tip entered 
+    var percentageTip = 20; // def
+    var tipBox = document.getElementById("tipPercentage");
+   
     if (tipBox && tipBox.value !== "") {
       var typed = parseFloat(tipBox.value);
       if (!isNaN(typed) && typed >= 0) {
