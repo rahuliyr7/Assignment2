@@ -82,13 +82,18 @@ document.getElementById("tipCalculatorForm").addEventListener("submit", function
     // calculate
     var tip = subTotal * (percentageTip / 100);
     var total = subTotal + tip;
+
+    //round
+    subtTotal = parseFloat(subTotal.toFixed(2));
+    tip = parseFloat(tip.toFixed(2));
+    total = parseFloat(tip.toFixed(2));
+
   
     // update and provide results
-    document.getElementById("finalSubtotal").textContent = " $" + subTotal;
-    document.getElementById("finalTip").textContent = " $" + tip;
-    document.getElementById("finalTotal").textContent = " $" + total;
-    document.getElementById("completed").textContent =
-      "total with " + percentageTip + "% tip is $" + total;
+    document.getElementById("finalSubtotal").textContent = " $" + subTotal.toFixed(2);
+    document.getElementById("finalTip").textContent = " $" + tip.toFixed(2);
+    document.getElementById("finalTotal").textContent = " $" + total.toFixed(2);
+    document.getElementById("completed").textContent = "total with " + percentageTip + "% tip is $" + total.toFixed(2);
   
     console.log("Tip %:", percentageTip);
   });
